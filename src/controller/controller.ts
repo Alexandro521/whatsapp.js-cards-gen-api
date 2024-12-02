@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CreateUserCard } from '../functions/userCardGenerator';
+import { CreateUserCard } from '../services/userCardGenerator';
 
 export default class Controller { 
 
@@ -20,6 +20,7 @@ export default class Controller {
         }catch(err) {
             console.log(err);
         }
+        
     }
 }
 
