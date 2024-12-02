@@ -8,7 +8,6 @@ const app = express();
 app.disable('x-powered-by');
 app.use(cors(corsConfig));
 app.use(express.json());
-app.use("/api",validateQuery);
 
 app.get('/', (req, res) => {
     res.json({ message: 'Hello World!' });
