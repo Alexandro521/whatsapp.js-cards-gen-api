@@ -11,7 +11,7 @@ export async function CreateUserCard({ picture, kickname, exp, lvl, rank, status
         requiredXP: 95195,
         backgroundColor: { background: '#070d19', bubbles: '#0ca7ff' },
         // backgroundImgURL: 'any_image.png', ( you can also use )
-        avatarImgURL: 'https://archive.org/download/discordprofilepictures/discordblue.png',
+        avatarImgURL: picture || 'https://archive.org/download/discordprofilepictures/discordblue.png',
         nicknameText: { content: kickname, color: '#0CA7FF' },
         userStatus: 'idle',
     }).build();
