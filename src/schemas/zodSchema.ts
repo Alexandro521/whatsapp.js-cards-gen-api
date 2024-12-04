@@ -6,5 +6,5 @@ export const userCardSchema = z.object({
     exp: z.number({required_error: 'exp is required', invalid_type_error: 'exp must be a number',}),
     lvl: z.number({required_error: 'lvl is required', invalid_type_error: 'lvl must be a number',}),
     rank: z.number({required_error: 'rank is required', invalid_type_error: 'rank must be a number',}),
-    status: z.string({required_error: 'status is required', invalid_type_error: 'status must be a string',}).min(1,{message: 'status must be at least 2 characters long'}),
+    requiredXP: z.number({required_error: 'status is required', invalid_type_error: 'status must be a string',}).min(1,{message: 'status must be at least 1 characters long'}),
 });
