@@ -16,7 +16,8 @@ export async function CreateUserCard({ picture, kickname, exp, lvl, rank, requir
         userStatus: 'online',
         
     }).build();
-        return canvasRank.toBuffer();
+        
+    return canvasRank.toBuffer();
         } catch (err) {
             console.log(err);
         }
