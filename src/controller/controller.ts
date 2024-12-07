@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { CreateUserCard } from '../services/userCardGenerator';
 import { topCardGenerator } from '../services/topCardGenerator';
-import { userCardSchema , leaderTableSchema } from '../schemas/zodSchema';
+import { userCardSchema, leaderTableSchema } from '../schemas/zodSchema';
+import { render } from '../services/build';
 export default class Controller { 
 
     static async getCards(req:Request, res:Response) { 
@@ -31,6 +32,16 @@ export default class Controller {
             res.setHeader('Content-Type', 'image/png');
             res.status(201).send(buffer);
             
+        }catch (err) {
+            res.status(500).json({ error: err});
+            console.log(err);
+        }
+    }
+    static async getArchivementCards(req: Request, res: Response) { 
+        try {
+           const buffer = await render();
+            res.setHeader('Content-Type', 'image/png');
+            res.status(201).send(buffer);
         }catch (err) {
             res.status(500).json({ error: err});
             console.log(err);

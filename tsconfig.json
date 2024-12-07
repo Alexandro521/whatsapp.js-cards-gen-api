@@ -6,12 +6,19 @@
         "strict": true,
         "esModuleInterop": true,
         "allowArbitraryExtensions": true,
+        "noImplicitAny": false,
         "skipLibCheck": true, 
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "outDir": "./dist",
         "rootDir": "./src",
         "typeRoots": ["./node_modules/@types"],
+        "jsx": "react", // Canvacord uses React-like JSX
+        "jsxFactory": "JSX.createElement", // works as @jsx
+        "jsxFragmentFactory": "JSX.Fragment" ,
+
+        
+        
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules"]
